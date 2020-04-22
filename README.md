@@ -1,4 +1,6 @@
-# 010_vue_tic_tac_toe
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cc22b28e-d876-4119-9264-1da5c1bf3372/deploy-status)](https://app.netlify.com/sites/naughty-banach-34a8fa/deploys)
+
+# Tic Tac Toe in VueJS
 
 ## Project setup
 ```
