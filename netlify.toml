@@ -1,0 +1,10 @@
+[build]
+    base = "."
+    publish = "./dist/"
+    command = "npm install --only=dev && npm run build:netlify"
+
+    [build.environment]
+        NODE_VERSION = "10.20.0"
+
+[[plugins]]
+    package = "netlify-plugin-cypress"
