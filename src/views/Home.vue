@@ -15,9 +15,20 @@
         <br />
       </div>
     </div>
-    <bigbutton label="START"></bigbutton>
-    <bigbutton label="HOW TO PLAY" theme="warning"></bigbutton>
-    <bigbutton label="ABOUT GAME" theme="info"></bigbutton>
+    <bigbutton
+      label="START"
+      @clicked="$router.push({ name: 'Game' })"
+    ></bigbutton>
+    <bigbutton
+      label="HOW TO PLAY"
+      theme="warning"
+      @clicked="$router.push({ name: 'HowToPlay' })"
+    ></bigbutton>
+    <bigbutton
+      label="ABOUT GAME"
+      theme="info"
+      @clicked="$router.push({ name: 'About' })"
+    ></bigbutton>
   </div>
 </template>
 

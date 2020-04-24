@@ -11,25 +11,25 @@ describe('Home.vue', () => {
 
   it('should show a button with START text', () => {
     let wrapper = shallowMount(Home)
-    let start_button = wrapper
+    let start_buttons = wrapper
       .findAll(BigButton)
       .filter(button => button.props('label') == 'START')
-    expect(start_button.length).toBe(1) // Did we find the button?
+    expect(start_buttons.length).toBe(1) // Did we find the button?
   })
 
   it('should show a button with HOW TO PLAY text', () => {
     let wrapper = shallowMount(Home)
-    let start_button = wrapper
+    let howtoplay_buttons = wrapper
       .findAll(BigButton)
       .filter(button => button.props('label') == 'HOW TO PLAY')
-    expect(start_button.length).toBe(1) // Did we find the button?
+    expect(howtoplay_buttons.length).toBe(1) // Did we find the button?
   })
 
   it('should should a button with ABOUT GAME text', () => {
     let wrapper = shallowMount(Home)
-    let start_button = wrapper
+    let about_buttons = wrapper
       .findAll(BigButton)
       .filter(button => button.props('label') == 'ABOUT GAME')
-    expect(start_button.length).toBe(1) // Did we find the button?
+    expect(about_buttons.length).toBe(1) // Did we find the button?
   })
 })
