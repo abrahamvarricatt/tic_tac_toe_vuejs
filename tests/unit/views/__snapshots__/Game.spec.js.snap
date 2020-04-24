@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game.vue renders correctly 1`] = `
+<div>
+  <div
+    class="row"
+  >
+    <div
+      class="col text-center"
+    >
+      <h1
+        class="display-4 title"
+      >
+        Game Page
+      </h1>
+       
+      <br />
+    </div>
+  </div>
+   
+  <div
+    class="row"
+  >
+    <div
+      class="col"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <gamebutton-stub
+                display="O"
+                x="0"
+                y="0"
+              />
+            </td>
+             
+            <td>
+              <gamebutton-stub
+                display="X"
+                x="0"
+                y="1"
+              />
+            </td>
+             
+            <td>
+              <gamebutton-stub
+                display=""
+                x="0"
+                y="2"
+              />
+            </td>
+          </tr>
+           
+          <tr>
+            <td>
+              <gamebutton-stub
+                display=""
+                x="1"
+                y="0"
+              />
+            </td>
+             
+            <td>
+              <gamebutton-stub
+                display=""
+                x="1"
+                y="1"
+              />
+            </td>
+             
+            <td>
+              <gamebutton-stub
+                display="X"
+                x="1"
+                y="2"
+              />
+            </td>
+          </tr>
+           
+          <tr>
+            <td>
+              <gamebutton-stub
+                display="X"
+                x="2"
+                y="0"
+              />
+            </td>
+             
+            <td>
+              <gamebutton-stub
+                display="X"
+                x="2"
+                y="1"
+              />
+            </td>
+             
+            <td>
+              <gamebutton-stub
+                display="X"
+                x="2"
+                y="2"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
