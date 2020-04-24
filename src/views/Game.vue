@@ -55,17 +55,13 @@
 <script>
 import gamebutton from '../components/GameButton'
 export default {
-  data: function() {
-    return {
-      game_world: [
-        ['O', 'X', ''],
-        ['', '', 'X'],
-        ['X', 'X', 'X']
-      ]
-    }
-  },
   components: {
     gamebutton
+  },
+  computed: {
+    game_world: function() {
+      return this.$store.state.gameworld
+    }
   }
 }
 </script>
