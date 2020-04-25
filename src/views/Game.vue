@@ -14,35 +14,80 @@
           <tbody>
             <tr>
               <td>
-                <gamebutton :x="0" :y="0" :display="game_world[0][0]" />
+                <gamebutton
+                  :x="0"
+                  :y="0"
+                  :display="game_world[0][0]"
+                  @game-click="processClick"
+                />
               </td>
               <td>
-                <gamebutton :x="0" :y="1" :display="game_world[0][1]" />
+                <gamebutton
+                  :x="0"
+                  :y="1"
+                  :display="game_world[0][1]"
+                  @game-click="processClick"
+                />
               </td>
               <td>
-                <gamebutton :x="0" :y="2" :display="game_world[0][2]" />
+                <gamebutton
+                  :x="0"
+                  :y="2"
+                  :display="game_world[0][2]"
+                  @game-click="processClick"
+                />
               </td>
             </tr>
             <tr>
               <td>
-                <gamebutton :x="1" :y="0" :display="game_world[1][0]" />
+                <gamebutton
+                  :x="1"
+                  :y="0"
+                  :display="game_world[1][0]"
+                  @game-click="processClick"
+                />
               </td>
               <td>
-                <gamebutton :x="1" :y="1" :display="game_world[1][1]" />
+                <gamebutton
+                  :x="1"
+                  :y="1"
+                  :display="game_world[1][1]"
+                  @game-click="processClick"
+                />
               </td>
               <td>
-                <gamebutton :x="1" :y="2" :display="game_world[1][2]" />
+                <gamebutton
+                  :x="1"
+                  :y="2"
+                  :display="game_world[1][2]"
+                  @game-click="processClick"
+                />
               </td>
             </tr>
             <tr>
               <td>
-                <gamebutton :x="2" :y="0" :display="game_world[2][0]" />
+                <gamebutton
+                  :x="2"
+                  :y="0"
+                  :display="game_world[2][0]"
+                  @game-click="processClick"
+                />
               </td>
               <td>
-                <gamebutton :x="2" :y="1" :display="game_world[2][1]" />
+                <gamebutton
+                  :x="2"
+                  :y="1"
+                  :display="game_world[2][1]"
+                  @game-click="processClick"
+                />
               </td>
               <td>
-                <gamebutton :x="2" :y="2" :display="game_world[2][2]" />
+                <gamebutton
+                  :x="2"
+                  :y="2"
+                  :display="game_world[2][2]"
+                  @game-click="processClick"
+                />
               </td>
             </tr>
           </tbody>
@@ -54,13 +99,22 @@
 
 <script>
 import gamebutton from '../components/GameButton'
+import { mapActions } from 'vuex'
+
 export default {
   components: {
     gamebutton
   },
   computed: {
     game_world: function() {
-      return this.$store.state.gameworld
+      return this.$store.getters.gameworld
+    }
+  },
+  methods: {
+    ...mapActions(['play_move']),
+    processClick: function({ x, y }) {
+      console.log('button was clicked at these co-ordinates = ' + x + ',' + y)
+      this.play_move({ x: x, y: y, display: 'X' })
     }
   }
 }
