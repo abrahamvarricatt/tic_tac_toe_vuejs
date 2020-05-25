@@ -107,5 +107,17 @@ exports[`Game.vue renders correctly 1`] = `
       </table>
     </div>
   </div>
+   
+  <div
+    class="row"
+  >
+    <div
+      class="col"
+    >
+      <progressbar-stub
+        progress="0"
+      />
+    </div>
+  </div>
 </div>
 `;

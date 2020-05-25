@@ -4,6 +4,14 @@
 
 This is a simple Tic Tac Toe game made with VueJS (a learning exercise). 
 
+### Snapshot tests
+
+To update the snapshots in tests you can run,
+
+```
+npx vue-cli-service test:unit -u
+```
+
 
 ## Attributions
 

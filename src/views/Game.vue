@@ -94,20 +94,31 @@
         </table>
       </div>
     </div>
+    <!-- Progress Bar -->
+    <div class="row">
+      <div class="col">
+        <progressbar :progress="progress_value" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import gamebutton from '../components/GameButton'
+import gamebutton from '@/components/GameButton'
+import progressbar from '@/components/ProgressBar'
 import { mapActions } from 'vuex'
 
 export default {
   components: {
-    gamebutton
+    gamebutton,
+    progressbar
   },
   computed: {
     game_world: function() {
       return this.$store.getters.gameworld
+    },
+    progress_value: function() {
+      return this.$store.getters.progressbar
     }
   },
   methods: {

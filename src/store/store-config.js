@@ -8,7 +8,8 @@ const state = {
     ['', '', ''],
     ['', '', '']
   ],
-  game_progress: 'in-progress'
+  game_progress: 'in-progress',
+  progress_bar: 0
 }
 
 export default {
